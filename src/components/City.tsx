@@ -23,8 +23,6 @@ export default function City({ city }: { city: City[] }) {
             setSelectedCity(selectedCity);
         }
     };
-
-    console.log(selectedCity?.length)
     return (
         <div className="flex flex-col items-center gap-12 bg-gradient-to-r from-purple-500 to-pink-500 h-screen w-screen">
             <h1 className='mt-20 lg:mt-5 font-bold text-4xl text-white'>City Selection</h1>

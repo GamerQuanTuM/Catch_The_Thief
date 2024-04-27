@@ -18,7 +18,7 @@ const Cops = [
 ]
 
 
-export default function Copa({ vehicle }: { vehicle: Vehicle[] }) {
+export default function CopsAvailable({ vehicle }: { vehicle: Vehicle[] }) {
     const router = useRouter()
     return (
         <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-screen w-screen overflow-hidden">
