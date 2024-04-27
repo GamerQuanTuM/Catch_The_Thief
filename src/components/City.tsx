@@ -23,6 +23,8 @@ export default function City({ city }: { city: City[] }) {
             setSelectedCity(selectedCity);
         }
     };
+
+    console.log(selectedCity?.length)
     return (
         <div className="flex flex-col items-center gap-12 bg-gradient-to-r from-purple-500 to-pink-500 h-screen w-screen">
             <h1 className='mt-20 lg:mt-5 font-bold text-4xl text-white'>City Selection</h1>
@@ -55,7 +57,7 @@ export default function City({ city }: { city: City[] }) {
                 </div>
 
                 {selectedCity && selectedCity?.length > 0 && <div className='mt-5 flex justify-center'>
-                    <Button className='w-48 text-lg bg-red-600 text-white hover:bg-red-500' onClick={() => router.push("/cops-available")}>Next</Button>
+                    <Button className='w-48 text-lg bg-red-600 text-white hover:bg-red-500' disabled={selectedCity.length < 3} onClick={() => router.push("/cops-available")}>Next</Button>
                 </div>}
             </div>
         </div>
