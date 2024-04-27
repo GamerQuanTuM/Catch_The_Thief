@@ -45,7 +45,7 @@ export default function City({ city }: { city: City[] }) {
                     <Carousel>
                         <CarouselContent>
                             {selectedCity?.map((city) => (
-                                <CarouselItem>
+                                <CarouselItem key={city.id}>
                                     <Image src={city.imageUrl} alt='City.png' height={500} width={500} />
                                 </CarouselItem>
                             ))}
